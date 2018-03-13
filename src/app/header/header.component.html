@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+    <span><img src="/assets/images/logo.png" height=30 width=41></span>
+    <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>
+    <a mat-button routerLink="/about" routerLinkActive="active"><span class="fa fa-info fa-lg"></span> Conoce mas</a>
+    <a mat-button routerLink="/donate" routerLinkActive="active"><span class="fa fa-list fa-lg"></span> Se un Donador</a>
+    <a mat-button routerLink="/donate-list" routerLinkActive="active"><span class="fa fa-heart fa-lg"></span> Heroes</a>
+    <a mat-button routerLink="/contact" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contactanos</a>
+    <span class="flex-spacer"></span>
+    <a *ngIf="!username" mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span> Login</a>
+    <a *ngIf="username">{{username}}</a>
+    <a *ngIf="username" mat-button (click)="logOut()"><span class="fa fa-sign-out fa-lg"></span> Logout</a>  
+  </mat-toolbar>
+
+  <div class="card">
+
+    <!--Card image-->
+    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap">
+
+    <!--Card content-->
+    <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">Card title</h4>
+        <!--Text-->
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary waves-light" mdbRippleRadius>Button</a>
+    </div>
+
+</div>
+            
